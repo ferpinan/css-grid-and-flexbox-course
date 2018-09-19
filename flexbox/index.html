@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav id="mainMenu">
+        <ul>
+            <li class="active">Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+            <li>Menu 5</li>
+            <li>Menu 6</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Clasico form</h1>
+        <form class="flexbox-container">
+            <label>Name</label>
+            <input type="text">
+            <button type="button" class="btn btn-primary">Primary</button>
+        </form>
+
+        <h1>Input con botones plus menos</h1>
+        <form class="flexbox-container">
+            <button type="button" class="btn btn-primary">-</button>
+            <input type="text">
+            <button type="button" class="btn btn-primary">+</button>
+        </form>
+
+        <h1>Un flex row (por defecto) dentro de otro flex vertical</h1>
+        <form class="flexbox-container flex-vertical">
+            <div class="flexbox-container">
+                <label>Nights:</label>
+                <button type="button" class="btn btn-primary">-</button>
+                <input type="text">
+                <button type="button" class="btn btn-primary">+</button>
+            </div>
+            <div class="flexbox-container">
+                <label>Beds:</label>
+                <button type="button" class="btn btn-primary">-</button>
+                <input type="text">
+                <button type="button" class="btn btn-primary">+</button>
+            </div>
+        </form>
+
+        <h1>Tarjeta con inline-flexbox vertical</h1>
+        <div class="inline-flexbox-container flex-vertical card">
+            <h3>Regalo</h3>
+            <i class="fas fa-6x fa-gift"></i>
+            <small>100$ <s>150$</s></small>
+        </div>
+
+        <h1>Tarjetas row con mediaquery para que cambie</h1>
+        <button type="button" class="btn btn-primary" id="toggleDirection">Toggle</button>
+        <div class="flexbox-container ">
+            <div class="flexbox-container flex--row media-query card">
+                <img src="https://static01.nyt.com/images/2018/09/18/business/19bordertech-promo/19bordertech-promo-videoLarge.jpg">
+                <h4>Card 1</h4>
+            </div>
+            <div class="flexbox-container flex--row media-query card">
+                <img src="https://static01.nyt.com/images/2018/09/18/business/19bordertech-promo/19bordertech-promo-videoLarge.jpg">
+                <h4>Card 2</h4>
+            </div>
+            <div class="flexbox-container flex--row media-query card">
+                <img src="https://static01.nyt.com/images/2018/09/18/business/19bordertech-promo/19bordertech-promo-videoLarge.jpg">
+                <h4>Card 3</h4>
+            </div>
+        </div>
+        <script>
+            $("#toggleDirection").click(function () {
+                $(".flexbox-container.media-query.card").toggleClass("flex--row");
+                $(".flexbox-container.media-query.card").toggleClass("flex-vertical");
+            })
+
+
+        </script>
+
+        <h1>Un flex flow</h1>
+        <div class="flexbox-container flexbox-flow">
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+            <div>
+                <i class="fas fa-user fa-7x"></i>
+            </div>
+        </div>
+
+
+        <h1>Otro flex flow</h1>
+        <div class="flexbox-container flexbox-flow">
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flexbox-flow-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+        </div>
+
+        <h1>Jugando con el orden</h1>
+        <div class="flexbox-container">
+            <div>Item</div>
+            <div>Item</div>
+            <div class="ordenacion">Boats!</div>
+            <div>Item</div>
+            <div>Item</div>
+        </div>
+
+        <h1>Jugando con el orden II</h1>
+        <div class="flexbox-container flexbox-flow">
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flexbox-flow-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card ordenacion">
+                    <h3>Regalo Deal #1</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card ordenacion">
+                    <h3>Regalo Deal #2</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card ordenacion">
+                    <h3>Regalo Regalo #Deal3</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+                <div class="flexbox-container flex-vertical card">
+                    <h3>Regalo</h3>
+                    <i class="fas fa-6x fa-gift"></i>
+                    <small>100$ <s>150$</s></small>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
