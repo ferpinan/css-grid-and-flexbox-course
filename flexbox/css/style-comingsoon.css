@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    
+}
+.flexbox-container{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background: blue;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}

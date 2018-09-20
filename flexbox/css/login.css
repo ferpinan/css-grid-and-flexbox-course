@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    
+}
+.flexbox-container{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background: rgba(122, 122, 122, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    width: 500px;
+}
+
+.icon{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border: 2px solid grey;
+    border-radius: 150px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.remember{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+    margin-top: 25px;
+    display: flex;
+}
+
+.links span{
+    margin: 0px 5px 0px 5px;
+}
